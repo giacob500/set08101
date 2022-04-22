@@ -79,7 +79,7 @@ let questions = [
     },
     {
         numb: 8,
-        question: "A tribute to David Bowie’s ex-wife was given with a song by The Rolling stones, name the song?",
+        question: "A tribute to David Bowie's ex-wife was given with a song by The Rolling stones, name the song?",
         answer: "Angie",
         options: [
             "Wild Horses",
@@ -135,9 +135,9 @@ let questions = [
     {
         numb: 13,
         question: "The most played song on American radio during the 20th century was?",
-        answer: "You’ve Lost That Loving Feeling",
+        answer: "You've Lost That Loving Feeling",
         options: [
-            "You’ve Lost That Loving Feeling",
+            "You've Lost That Loving Feeling",
             "Just Once in My Life",
             "Danger Zone",
             "Soul and Inspiration"
@@ -184,7 +184,7 @@ let questions = [
             "Q-Tip",
             "Deee-Lite",
             "Technotronic",
-            "The B-52’s"
+            "The B-52's"
         ]
     },
     {
