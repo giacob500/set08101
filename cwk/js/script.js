@@ -51,6 +51,25 @@ function showQuestions(index){
     + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
     que_text.innerHTML = que_tag; //adding new span tag inside que_tag
     option_list.innerHTML = option_tag; //adding new div tag inside option_tag
+
+    const option = option_list.querySelector(".option");
+
+    // set onclick attribute to all available options
+    for (let i = 0; i < option.length; i++) {
+        option[i].setAttribute("onclick", "optionSelected(this)");        
+    }
+}
+
+function optionSelected(answer){
+    let userAns = answer.textContent;
+    let correctAns = questions[que_count].answer;
+    if (userAns == correctAns){
+        answer.classList.add("correct");
+        console.log("Answer is correct");
+    } else {
+        answer.classList.add("incorrect");
+        console.log("Answer is Wrong");
+    }
 }
 
 function queCounter(index){

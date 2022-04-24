@@ -217,14 +217,14 @@ section .option_list .option:hover{
 
 section .option_list .option.correct{
     color: #155724;
-    background: #ffc2f2;
-    border: 1px solid #ffc2f2;
+    background: #ccffd8;
+    border: 1px solid #ccffd8;
 }
 
 section .option_list .option.incorrect{
     color: #721c24;
-    background: #ffc2f2;
-    border: 1px solid #ffc2f2;
+    background: #ffd9dc;
+    border: 1px solid #ffd9dc;
 }
 
 section .option_list .option.disabled{
