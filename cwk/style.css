@@ -136,9 +136,9 @@ body{
 }
 
 .quiz_box header .timer{
-    color: #004085;
-    background: #cce5ff;
-    border: 1px solid #b8daff;
+    color: #8c006e;
+    background: #ffedfb;
+    border: 1px solid #ff9eea;
     height: 45px;
     padding: 0 8px;
     border-radius: 5px;
@@ -192,8 +192,8 @@ section .option_list{
 }
 
 section .option_list .option{
-    background: aliceblue;
-    border: 1px solid #84c5fe;
+    background: #ffedfb;
+    border: 1px solid #ff9eea;
     border-radius: 5px;
     padding: 8px 15px;
     font-size: 17px;
@@ -210,21 +210,21 @@ section .option_list .option:last-child{
 }
 
 section .option_list .option:hover{
-    color: #004085;
-    background: #cce5ff;
-    border: 1px solid #b8daff;
+    color: #8c006e;
+    background: #ffc2f2;
+    border: 1px solid #ffc2f2;
 }
 
 section .option_list .option.correct{
     color: #155724;
-    background: #d4edda;
-    border: 1px solid #c3e6cb;
+    background: #ffc2f2;
+    border: 1px solid #ffc2f2;
 }
 
 section .option_list .option.incorrect{
     color: #721c24;
-    background: #f8d7da;
-    border: 1px solid #f5c6cb;
+    background: #ffc2f2;
+    border: 1px solid #ffc2f2;
 }
 
 section .option_list .option.disabled{
@@ -245,12 +245,12 @@ section .option_list .option .icon{
 .option_list .option .icon.tick{
     color: #23903c;
     border-color: #23903c;
-    background: #d4edda;
+    background: #ffc2f2;
 }
 
 .option_list .option .icon.cross{
     color: #a42834;
-    background: #f8d7da;
+    background: #ffc2f2;
     border-color: #a42834;
 }
 
@@ -297,7 +297,7 @@ footer button{
 }
 
 footer button:hover{
-    background: #0263ca;
+    background: #8c006e;
 }
 
 footer button.show{
@@ -369,7 +369,7 @@ footer button.show{
 }
 
 .buttons button.restart:hover{
-    background: #0263ca;
+    background: #8c006e;
 }
 
 .buttons button.quit{
