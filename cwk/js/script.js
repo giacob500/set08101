@@ -6,11 +6,12 @@ const continue_btn = info_box.querySelector(".buttons .restart");
 const quiz_box = document.querySelector(".quiz_box");
 const option_list = document.querySelector(".option_list");
 const timeCount = quiz_box.querySelector(".timer .timer_sec");
+const timeLine = quiz_box.querySelector("header .time_line");
 
 // if startQuiz button is clicked
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
-    next_btn.classList.add("show"); // testing
+    next_btn.classList.add("show");  //testing
 }
 // if exitQuiz button is clicked
 exit_btn.onclick = ()=>{
@@ -24,12 +25,14 @@ continue_btn.onclick = ()=>{
     showQuestions(0); //calling showQestions function
     queCounter(1) //passing 1 parameter to queCounter
     startTimer(25); //calling startTimer function
+    startTimerLine(0); //calling startTimerLine function
 }
 
 let que_count = 0;
 let que_numb = 1;
 let counter;
 let timeValue = 25;
+let widthValue = 0;
 
 const next_btn = quiz_box.querySelector(".next_btn");
 
@@ -42,6 +45,9 @@ next_btn.onclick = ()=>{
         queCounter(que_numb);
         clearInterval(counter);
         startTimer(timeValue);
+        clearInterval(counterLine);
+        startTimerLine(widthValue);
+        next_btn.style.display = "none";
     } else {
         console.log("Questions completed");
     }
@@ -99,6 +105,8 @@ function optionSelected(answer){
         option_list.children[i].classList.add("disabled");
         
     }
+
+    next_btn.style.display = "block";
 }
 
 function startTimer(time){
@@ -113,6 +121,17 @@ function startTimer(time){
         if(time < 0){
             clearInterval(counter);
             timeCount.textContent = "00";
+        }
+    }
+}
+
+function startTimerLine(time){
+    counterLine = setInterval(timer, 29);
+    function timer(){
+        time++;
+        timeLine.style.width = time + "px";
+        if(time > 549){
+            clearInterval(counter);
         }
     }
 }
