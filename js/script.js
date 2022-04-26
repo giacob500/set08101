@@ -37,7 +37,6 @@ let counter;
 let counterLine;
 let widthValue = 0;
 
-
 const restart_quiz = resultsBox.querySelector(".buttons .restart");
 const quit_quiz = resultsBox.querySelector(".buttons .quit");
 
@@ -104,7 +103,7 @@ function showQuestions(index){
 
     const option = optionList.querySelectorAll(".option");
 
-    // Set onclick attribute to all available options
+    // Set onclick attriute to all available options
     for (let i = 0; i < option.length; i++) {
         option[i].setAttribute("onclick", "optionSelected(this)");        
     }
@@ -134,7 +133,7 @@ function optionSelected(answer){
         console.log("Answer is Wrong");
 
         // If the answer is wrong automatically show correct answer
-        for (let i = 0; i < allOptions; i++) {
+        for (i = 0; i < allOptions; i++) {
             if(optionList.children[i].textContent == correctAns){ // If there is an option which is matched to an array answer
                 optionList.children[i].setAttribute("class", "option correct"); // Adding green color to matched option
                 optionList.children[i].insertAdjacentHTML("beforeend", tickIconTag); // Adding tick icon to matched option
@@ -142,7 +141,7 @@ function optionSelected(answer){
             }
         }
     }
-    for (let i = 0; i < allOptions; i++) {
+    for (i = 0; i < allOptions; i++) {
         optionList.children[i].classList.add("disabled"); // Once user select an option then disabled all options
     }
     next_btn.classList.add("show"); // Show the next button if user selected any option
@@ -199,12 +198,12 @@ function startTimer(time){
 }
 
 function startTimerLine(time){
-    counterLine = setInterval(timer, 29);
+    counterLine = setInterval(timer, 49);
     function timer(){
-        time++; // Upgrading time value by 1
+        time ++; // Upgrading time value by 1
         timeLine.style.width = time + "px"; // Increasing width of time_line with px by time value
-        if(time > 549){ //If time value is greater than 549
-            clearInterval(counter); //Clear counterLine
+        if(time > 549){ // If time value is greater than 549
+            clearInterval(counterLine); // Clear counterLine
         }
     }
 }
