@@ -177,8 +177,8 @@ function startTimer(time){
             timeCount.textContent = "0" + addZero; // Add a 0 before time value
         }
         if(time < 0){ // If timer is less than 0
+            console.log("Time: " + time);
             clearInterval(counter); // Clear counter
-            timeText.textContent = "Time Off"; // Change the time text to time off
             const allOptions = optionList.children.length; // Getting all option items
             let correctAns = questions[que_count].answer; // Getting correct answer from array
             
