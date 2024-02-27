@@ -152,7 +152,7 @@ function showResultBox(){
     quizBox.classList.remove("activeQuiz"); // Hide the quiz box
     resultsBox.classList.add("activeResult"); // Show the result box
     const scoreText = resultsBox.querySelector(".score_text");
-    if(userScore > 20){// If user scored more than 20
+    if(userScore > 15){// If user scored more than 20
         // Creating a new span tag and passing the user score number and total question number
         let scoreTag = '<span>Congrats! 😎, score: <p>'+ userScore +'</p> / <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
